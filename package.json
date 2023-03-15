@@ -1,22 +1,39 @@
 {
-  "name": "gas-frontend",
-  "version": "0.1.0",
-  "private": true,
-  "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
-  },
-  "dependencies": {
-    "@types/node": "18.15.3",
-    "@types/react": "18.0.28",
-    "@types/react-dom": "18.0.11",
-    "eslint": "8.36.0",
-    "eslint-config-next": "13.2.4",
-    "next": "13.2.4",
-    "react": "18.2.0",
-    "react-dom": "18.2.0",
-    "typescript": "4.9.5"
-  }
+    "name": "ghub",
+    "version": "0.1.0",
+    "private": true,
+    "scripts": {
+        "dev": "next dev",
+        "build": "next build",
+        "start": "next start",
+        "lint": "next lint"
+    },
+    "dependencies": {
+        "@headlessui/react": "^1.7.13",
+        "@heroicons/react": "^2.0.16",
+        "@tanstack/react-query": "^4.26.1",
+        "@types/node": "18.15.3",
+        "@types/react": "18.0.28",
+        "@types/react-dom": "18.0.11",
+        "axios": "^1.3.4",
+        "eslint": "8.36.0",
+        "eslint-config-next": "13.2.4",
+        "flowbite": "^1.6.4",
+        "flowbite-react": "^0.4.2",
+        "lodash": "^4.17.21",
+        "next": "13.2.4",
+        "popper": "^1.0.1",
+        "react": "18.2.0",
+        "react-dom": "18.2.0",
+        "react-hook-form": "^7.43.5",
+        "react-popper": "^2.3.0",
+        "typescript": "4.9.5",
+        "zustand": "^4.3.6"
+    },
+    "devDependencies": {
+        "@types/lodash": "^4.14.191",
+        "autoprefixer": "^10.4.14",
+        "postcss": "^8.4.21",
+        "tailwindcss": "^3.2.7"
+    }
 }
