@@ -63,6 +63,8 @@ export function Navbar() {
                         type='text'
                         id='username'
                         name='username'
+                        autoComplete='off'
+                        autoCorrect='off'
                         onChange={handleChange}
                         placeholder='Pesquisar'
                         className='w-full h-10 rounded-md px-3 bg-slate-900 border border-violet-300'
