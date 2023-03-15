@@ -1,3 +1,5 @@
+import { useCallback, ChangeEvent } from 'react'
+
 import { usePages } from '@/hooks/usePages'
 import { useDebounce } from '@/hooks/useDebounce'
 import { useSearchStore } from '@/store/useSearchStore'
@@ -6,7 +8,6 @@ import Link from 'next/link'
 import Image from 'next/image'
 
 import logo from '@/assets/github.png'
-import { useCallback, ChangeEvent } from 'react'
 
 export function Navbar() {
     const pages = usePages()
