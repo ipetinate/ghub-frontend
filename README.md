@@ -276,7 +276,7 @@
     })
      ```
 
-     ![Primeiro teste](docs/images/first-test.png)
+     ![Primeiro teste](https://user-images.githubusercontent.com/15758789/225721733-fabd50ab-1a25-43cd-b7ff-3f8c305e3aba.png)
 
 ## Preview
 
@@ -284,8 +284,8 @@
 
 - Pesquisa de Usuários
 
-<https://user-images.githubusercontent.com/15758789/225418343-6df0c6b2-0182-4c5e-82ae-4fd76413edf2.mov>
+https://user-images.githubusercontent.com/15758789/225418343-6df0c6b2-0182-4c5e-82ae-4fd76413edf2.mov
 
 - Pesquisa de Repositórios
 
-<https://user-images.githubusercontent.com/15758789/225419746-2c7b020c-89c6-4ec5-bbad-622a84a92524.MP4>
+https://user-images.githubusercontent.com/15758789/225419746-2c7b020c-89c6-4ec5-bbad-622a84a92524.MP4
