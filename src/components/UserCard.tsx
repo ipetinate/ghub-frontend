@@ -10,9 +10,12 @@ export function UserCard({ user }: UserCardProps) {
         <div className='flex flex-col border border-violet-300 p-10 rounded-md max-w-4xl mx-auto'>
             <div className='flex flex-row gap-5'>
                 <div className='w-[200px] h-[200px]'>
-                    <div
-                        style={{ backgroundImage: `url('${user.avatar_url}')` }}
-                        className='rounded-md shadow-xl w-[200px] h-[200px] bg-cover bg-center'
+                    <Image
+                        src={user?.avatar_url ?? ''}
+                        width={200}
+                        height={200}
+                        alt='User image avatar'
+                        className='rounded-md shadow-xl w-[200px] h-[200px] min-w-[200px] min-h-[200px] bg-cover bg-center'
                     />
                 </div>
 
@@ -37,7 +40,9 @@ export function UserCard({ user }: UserCardProps) {
                     <p className='text-sm'>
                         Usuário desde:{' '}
                         <span className='text-violet-400'>
-                            {new Date(user.created_at).toLocaleString('pt-BR')}
+                            {new Date(user?.created_at ?? '').toLocaleString(
+                                'pt-BR'
+                            )}
                         </span>
                     </p>
 
