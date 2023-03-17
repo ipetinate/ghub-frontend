@@ -1,36 +1,36 @@
 export type GitHubUser = {
-    login: string
-    id: number
-    node_id: string
-    avatar_url: string
-    gravatar_id: string
-    url: string
-    html_url: string
-    followers_url: string
-    following_url: string
-    gists_url: string
-    starred_url: string
-    subscriptions_url: string
-    organizations_url: string
-    repos_url: string
-    events_url: string
-    received_events_url: string
-    type: string
-    site_admin: boolean
-    name: string
-    company: string
-    blog: string
-    location: string
-    email?: any
-    hireable: boolean
-    bio: string
-    twitter_username: string
-    public_repos: number
-    public_gists: number
-    followers: number
-    following: number
-    created_at: Date
-    updated_at: Date
+    login: string | null
+    id: number | null
+    node_id: string | null
+    avatar_url: string | null
+    gravatar_id: string | null
+    url: string | null
+    html_url: string | null
+    followers_url: string | null
+    following_url: string | null
+    gists_url: string | null
+    starred_url: string | null
+    subscriptions_url: string | null
+    organizations_url: string | null
+    repos_url: string | null
+    events_url: string | null
+    received_events_url: string | null
+    type: string | null
+    site_admin: boolean | null
+    name: string | null
+    company: string | null
+    blog: string | null
+    location: string | null
+    email?: any | null
+    hireable: boolean | null
+    bio: string | null
+    twitter_username: string | null
+    public_repos: number | null
+    public_gists: number | null
+    followers: number | null
+    following: number | null
+    created_at: Date | null
+    updated_at: Date | null
 }
 
 export interface RepositoryOwner {
@@ -55,11 +55,11 @@ export interface RepositoryOwner {
 }
 
 export interface License {
-    key: string
-    name: string
-    spdx_id: string
-    url: string
-    node_id: string
+    key: string | null
+    name: string | null
+    spdx_id: string | null
+    url: string | null
+    node_id: string | null
 }
 
 export interface GitHubRepository {
