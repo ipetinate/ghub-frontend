@@ -74,6 +74,29 @@
    2. Para rodar os testes, clique no arquivo, que poderá rodá-lo e ver o resultado da execução
 
       <https://user-images.githubusercontent.com/15758789/226454433-f29ccc35-4252-4f70-8e2c-50754db8a8c9.mov>
+6. Podemos também rodar os testes via terminal
+   1. Adicione o comando no scripts do `package.json`
+
+        ```json
+        "cy:run": "cypress run"
+        ```
+
+   2. Abra um terminal e rode
+
+        ```shell
+        # npm
+        npm run cy:run
+
+        # yarn
+        yarn cy:run
+        ```
+
+   3. Ao rodar veremos a seguinte saída no terminal
+
+        ![Captura de Tela 2023-03-20 às 17 20 09](https://user-images.githubusercontent.com/15758789/226456792-693f718b-854a-4a7f-817c-758a42119688.png)
+        ![Captura de Tela 2023-03-20 às 17 20 21](https://user-images.githubusercontent.com/15758789/226456849-306868e7-8b26-4ecd-a4eb-d2901316c95e.png)
+        ![Captura de Tela 2023-03-20 às 17 20 38](https://user-images.githubusercontent.com/15758789/226456883-5ee2c7ff-fdf2-4369-9dbb-3bf28c2d2f53.png)
+        ![Captura de Tela 2023-03-20 às 17 20 48](https://user-images.githubusercontent.com/15758789/226456902-0be3797d-84e8-4d21-b952-33bdb9e209ac.png)
 
 ## Erros e problemas
 
