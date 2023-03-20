@@ -29,7 +29,7 @@ export function Navbar() {
                 <Link href={'/'} className='flex flex-row gap-5 w-full'>
                     <Image
                         src={logo}
-                        alt='Github logo'
+                        alt='GHub logo'
                         height={128}
                         width={128}
                     />
