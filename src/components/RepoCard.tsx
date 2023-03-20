@@ -23,6 +23,12 @@ export function RepoCard({ repo }: RepoCardProps) {
 
     let { styles, attributes } = usePopper(referenceElement, popperElement)
 
+    const handleOpenRepoPage = useCallback(() => {
+        if (!window) return
+
+        window?.open(repo.html_url, '_blank')
+    }, [repo.html_url])
+
     return (
         <div className='w-80 h-80 border rounded flex flex-col justify-between overflow-hidden'>
             <div className='flex flex-row justify-between'>
@@ -31,18 +37,21 @@ export function RepoCard({ repo }: RepoCardProps) {
                     <div className='w-full overflow-hidden'>
                         <h2 className='text-xl'>{repo.name}</h2>
 
-                        <p className='text-sm truncate text-ellipsis overflow-hidden w-48'>
-                            <Tooltip content={repo.description}>
+                        <Tooltip content={repo.description}>
+                            <p className='text-sm truncate text-ellipsis overflow-hidden w-48'>
                                 {repo.description ?? 'Sem descrição'}
-                            </Tooltip>
-                        </p>
+                            </p>
+                        </Tooltip>
                     </div>
                 </div>
 
                 <div className='h-full flex items-center px-2'>
-                    <a target='_blank' href={repo.html_url}>
+                    <button
+                        onClick={handleOpenRepoPage}
+                        aria-label='Open repository page on GitHub in a new page'
+                    >
                         <ChevronRightIcon className='w-8 h-8' />
-                    </a>
+                    </button>
                 </div>
             </div>
 
@@ -111,7 +120,7 @@ export function RepoCard({ repo }: RepoCardProps) {
 
                     <div className='px-3 py-2 flex flex-row justify-between items-center'>
                         <Avatar
-                            img={user?.avatar_url}
+                            img={user?.avatar_url ?? ''}
                             placeholderInitials={user?.name?.charAt(0)}
                         >
                             <div className=' font-medium dark:text-white'>
@@ -141,7 +150,7 @@ export function RepoCard({ repo }: RepoCardProps) {
                                     >
                                         <div className='bg-white w-60 p-2 rounded-md flex flex-col justify-start items-start gap-2 z-50'>
                                             <Avatar
-                                                img={user?.avatar_url}
+                                                img={user?.avatar_url ?? ''}
                                                 placeholderInitials={user?.name?.charAt(
                                                     0
                                                 )}
@@ -196,7 +205,7 @@ export function RepoCard({ repo }: RepoCardProps) {
                                             ) : null}
 
                                             <a
-                                                href={user?.html_url}
+                                                href={user?.html_url ?? ''}
                                                 target='_blank'
                                                 className='h-5 w-full text-center bg-violet-300 text-sm rounded text-slate-900'
                                             >
