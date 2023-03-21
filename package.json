@@ -6,7 +6,9 @@
         "dev": "next dev",
         "build": "next build",
         "start": "next start",
-        "lint": "next lint"
+        "lint": "next lint",
+        "test:e2e": "playwright test",
+        "test:e2e-report": "playwright show-report"
     },
     "dependencies": {
         "@headlessui/react": "^1.7.13",
@@ -31,6 +33,7 @@
         "zustand": "^4.3.6"
     },
     "devDependencies": {
+        "@playwright/test": "^1.31.2",
         "@types/lodash": "^4.14.191",
         "autoprefixer": "^10.4.14",
         "postcss": "^8.4.21",
