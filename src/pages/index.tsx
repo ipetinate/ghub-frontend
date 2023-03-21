@@ -26,6 +26,7 @@ export default function Home() {
                     <Link
                         key={page.path}
                         href={page.path}
+                        data-testid={page.label}
                         className='
                           w-48 h-48 rounded-md
                           border-2 border-emerald-400
