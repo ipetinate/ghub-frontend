@@ -134,7 +134,13 @@
 
     ![Captura de Tela 2023-03-21 às 09 49 48](https://user-images.githubusercontent.com/15758789/226610960-ea032b93-d8ea-40b7-bf47-9470f3508aea.png)
 
-    <https://user-images.githubusercontent.com/15758789/226628170-a1efd264-8ffe-4349-9017-5b080cd0a07d.mov>
+    1. Rodando os testes via plugin
+
+        <https://user-images.githubusercontent.com/15758789/226628170-a1efd264-8ffe-4349-9017-5b080cd0a07d.mov>
+
+    2. Simulando erro
+
+        <https://user-images.githubusercontent.com/15758789/226633338-b9c731c6-ea16-4244-aeed-8457f71e4c40.mov>
 
 ## Problemas e Erros
 
