@@ -1,4 +1,4 @@
-import { useCallback, ChangeEvent } from 'react'
+import { useCallback, ChangeEvent, useMemo } from 'react'
 
 import { usePages } from '@/hooks/usePages'
 import { useDebounce } from '@/hooks/useDebounce'
@@ -8,8 +8,11 @@ import Link from 'next/link'
 import Image from 'next/image'
 
 import logo from '@/assets/github.png'
+import { useRouter } from 'next/router'
 
 export function Navbar() {
+    const { pathname } = useRouter()
+
     const pages = usePages()
 
     const { setTerm } = useSearchStore()
@@ -21,6 +24,11 @@ export function Navbar() {
             executeSearch(event.target.value)
         },
         [executeSearch]
+    )
+
+    const isHome = useMemo(
+        () => pathname.length === 1 || pathname === '/',
+        [pathname]
     )
 
     return (
@@ -42,34 +50,36 @@ export function Navbar() {
 
             <div className='flex items-center h-40 w-1/2 p-3'>
                 <div className='p-2 flex flex-col gap-3 max-w-lg w-full mx-auto'>
-                    <div className='flex flex-row gap-4'>
-                        {pages.map((page) => (
-                            <Link
-                                key={page.path}
-                                href={page.path}
-                                className={`font-semibold ${
-                                    page.active
-                                        ? 'text-violet-300'
-                                        : 'text-cyan-300'
-                                }`}
-                            >
-                                {page.label}
-                            </Link>
-                        ))}
-                    </div>
-
-                    <div className='h-0 border-b border-emerald-300' />
-
-                    <input
-                        type='text'
-                        id='username'
-                        name='username'
-                        autoComplete='off'
-                        autoCorrect='off'
-                        onChange={handleChange}
-                        placeholder='Pesquisar'
-                        className='w-full h-10 rounded-md px-3 bg-slate-900 border border-violet-300'
-                    />
+                    {isHome ? null : (
+                        <>
+                            <div className='flex flex-row gap-4'>
+                                {pages.map((page) => (
+                                    <Link
+                                        key={page.path}
+                                        href={page.path}
+                                        className={`font-semibold ${
+                                            page.active
+                                                ? 'text-violet-300'
+                                                : 'text-cyan-300'
+                                        }`}
+                                    >
+                                        {page.label}
+                                    </Link>
+                                ))}
+                            </div>
+                            <div className='h-0 border-b border-emerald-300' />
+                            <input
+                                type='text'
+                                id='username'
+                                name='username'
+                                autoComplete='off'
+                                autoCorrect='off'
+                                onChange={handleChange}
+                                placeholder='Pesquisar'
+                                className='w-full h-10 rounded-md px-3 bg-slate-900 border border-violet-300'
+                            />
+                        </>
+                    )}
                 </div>
             </div>
         </div>
