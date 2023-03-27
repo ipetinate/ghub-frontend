@@ -2,6 +2,8 @@
 
 > Pesquise repositórios e usuários do GitHub.
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/f13909c7-2076-4f17-9f58-23aa61c55bf9/deploy-status)](https://app.netlify.com/sites/ghub-client/deploys)
+
 ## Objetivo
 
 > Motivação para criar o projeto
